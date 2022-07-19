@@ -147,3 +147,30 @@ NameError: name 'notes' is not defined
 >>> Notes.objects.filter(text__icontains='Django').exclude(title__icontains='Django')
 <QuerySet []>
 >>>
+
+
+(.venv) PS C:\Users\Moiz\Downloads\Projects\Django\Smart_Notes_App> python manage.py makemigrations
+Please select a fix:
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+ 2) Quit and manually define a default value in models.py.
+Select an option: 1
+The datetime and django.utils.timezone modules are available, so it is possible to provide e.g. timezone.now as a value.
+Type 'exit' to exit this prompt
+>>> 1
+Migrations for 'notes':
+  notes\migrations\0002_notes_user.py
+    - Add field user to notes
+
+(.venv) PS C:\Users\Moiz\Downloads\Projects\Django\Smart_Notes_App> python manage.py shell
+Python 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from django.contrib.auth.models import User
+>>> user =  User.objects.get(pk=1)
+>>> user
+<User: admin>
+>>> user.notes.count()
+2
+>>> user.notes.all()
+<QuerySet [<Notes: Notes object (1)>, <Notes: Notes object (5)>]>
+>>> 
