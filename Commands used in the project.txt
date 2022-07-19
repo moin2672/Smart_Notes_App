@@ -47,3 +47,7 @@ Quit the server with CTRL-BREAK.
 [19/Jul/2022 16:18:39] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
 Not Found: /favicon.ico
 [19/Jul/2022 16:18:39] "GET /favicon.ico HTTP/1.1" 404 2114
+
+(.venv) PS C:\Users\Moiz\Downloads\Projects\Django\Smart_Notes_App> django-admin startapp home
+(.venv) PS C:\Users\Moiz\Downloads\Projects\Django\Smart_Notes_App> python manage.py runserver
+Watching for file changes with StatReloader
