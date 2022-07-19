@@ -96,3 +96,16 @@ Quit the server with CTRL-BREAK.
 [19/Jul/2022 17:50:50] "GET /admin/ HTTP/1.1" 302 0
 [19/Jul/2022 17:50:51] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2215
 [19/Jul/2022 17:50:51] "GET /static/admin/css/base.css HTTP/1.1" 200 19513
+
+
+(.venv) PS C:\Users\Moiz\Downloads\Projects\Django\Smart_Notes_App> django-admin startapp notes
+(.venv) PS C:\Users\Moiz\Downloads\Projects\Django\Smart_Notes_App> python manage.py makemigrations
+Migrations for 'notes':
+  notes\migrations\0001_initial.py
+    - Create model Notes
+(.venv) PS C:\Users\Moiz\Downloads\Projects\Django\Smart_Notes_App> python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, notes, sessions
+Running migrations:
+  Applying notes.0001_initial... OK
+(.venv) PS C:\Users\Moiz\Downloads\Projects\Django\Smart_Notes_App> 
