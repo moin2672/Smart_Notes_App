@@ -109,3 +109,41 @@ Operations to perform:
 Running migrations:
   Applying notes.0001_initial... OK
 (.venv) PS C:\Users\Moiz\Downloads\Projects\Django\Smart_Notes_App> 
+
+
+(.venv) PS C:\Users\Moiz\Downloads\Projects\Django\Smart_Notes_App> python manage.py shell
+Python 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from notes.model import Notes
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+ModuleNotFoundError: No module named 'notes.model'
+>>> from notes.models import Notes 
+>>> mynote = Notes.objects.get(pk='1')
+>>> mynote
+<Notes: Notes object (1)>
+>>> mynote.title
+'First Django Notes'
+>>> mynote.text
+'First Django Notes related content.'
+>>> notes.objects.all()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'notes' is not defined
+>>> Notes.objects.all() 
+<QuerySet [<Notes: Notes object (1)>]>
+>>> new_note = Notes.objects.create(title='A second note ', text='this is a second note')          
+>>> Notes.objects.all()
+<QuerySet [<Notes: Notes object (1)>, <Notes: Notes object (2)>]>
+>>> Notes.objects.filter(title__startswith="My")
+<QuerySet []>
+>>> Notes.objects.filter(title__startswith="First") 
+<QuerySet [<Notes: Notes object (1)>]>
+>>> Notes.objects.filter(text__icontains='Django')
+<QuerySet [<Notes: Notes object (1)>]>
+>>> Notes.objects.exclude(text__contains='Django')
+<QuerySet [<Notes: Notes object (2)>]>
+>>> Notes.objects.filter(text__icontains='Django').exclude(title__icontains='Django')
+<QuerySet []>
+>>>
