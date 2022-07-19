@@ -51,3 +51,48 @@ Not Found: /favicon.ico
 (.venv) PS C:\Users\Moiz\Downloads\Projects\Django\Smart_Notes_App> django-admin startapp home
 (.venv) PS C:\Users\Moiz\Downloads\Projects\Django\Smart_Notes_App> python manage.py runserver
 Watching for file changes with StatReloader
+
+
+(.venv) PS C:\Users\Moiz\Downloads\Projects\Django\Smart_Notes_App> python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying sessions.0001_initial... OK
+(.venv) PS C:\Users\Moiz\Downloads\Projects\Django\Smart_Notes_App> python manage.py createsuperuser
+Username (leave blank to use 'moin'): admin
+Email address:
+Password:
+Password (again):
+The password is too similar to the username.
+This password is too short. It must contain at least 8 characters.
+This password is too common.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+(.venv) PS C:\Users\Moiz\Downloads\Projects\Django\Smart_Notes_App> python manage.py runserver      
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 19, 2022 - 17:50:39
+Django version 4.0.6, using settings 'smartnotes.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[19/Jul/2022 17:50:50] "GET /admin HTTP/1.1" 301 0
+[19/Jul/2022 17:50:50] "GET /admin/ HTTP/1.1" 302 0
+[19/Jul/2022 17:50:51] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2215
+[19/Jul/2022 17:50:51] "GET /static/admin/css/base.css HTTP/1.1" 200 19513
