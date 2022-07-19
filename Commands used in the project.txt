@@ -1,0 +1,49 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+PS C:\Users\Moiz\Downloads\Projects\Django\Smart_Notes_App> py -3 -m venv .venv
+(.venv) PS C:\Users\Moiz\Downloads\Projects\Django\Smart_Notes_App> py -m pip install --upgrade pip
+Requirement already satisfied: pip in c:\users\moiz\downloads\projects\django\smart_notes_app\.venv\lib\site-packages (22.0.4)
+Collecting pip
+  Downloading pip-22.1.2-py3-none-any.whl (2.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 5.7 MB/s eta 0:00:00
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 22.0.4
+    Uninstalling pip-22.0.4:
+      Successfully uninstalled pip-22.0.4
+Successfully installed pip-22.1.2
+(.venv) PS C:\Users\Moiz\Downloads\Projects\Django\Smart_Notes_App> pip install Django
+Collecting Django
+Collecting asgiref<4,>=3.4.1
+  Downloading asgiref-3.5.2-py3-none-any.whl (22 kB)
+Collecting tzdata
+  Downloading tzdata-2022.1-py2.py3-none-any.whl (339 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 339.5/339.5 kB 917.1 kB/s eta 0:00:00
+Collecting sqlparse>=0.2.2
+  Downloading sqlparse-0.4.2-py3-none-any.whl (42 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.3/42.3 kB 1.0 MB/s eta 0:00:00
+Installing collected packages: tzdata, sqlparse, asgiref, Django
+Successfully installed Django-4.0.6 asgiref-3.5.2 sqlparse-0.4.2 tzdata-2022.1
+(.venv) PS C:\Users\Moiz\Downloads\Projects\Django\Smart_Notes_App> django-admin startproject smartnotes .
+(.venv) PS C:\Users\Moiz\Downloads\Projects\Django\Smart_Notes_App> python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+July 19, 2022 - 16:18:34
+Django version 4.0.6, using settings 'smartnotes.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[19/Jul/2022 16:18:38] "GET / HTTP/1.1" 200 10697
+[19/Jul/2022 16:18:39] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[19/Jul/2022 16:18:39] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[19/Jul/2022 16:18:39] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[19/Jul/2022 16:18:39] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+Not Found: /favicon.ico
+[19/Jul/2022 16:18:39] "GET /favicon.ico HTTP/1.1" 404 2114
