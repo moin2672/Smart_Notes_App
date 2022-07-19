@@ -1,8 +1,7 @@
 from typing import List
 from django.shortcuts import render
-from django.http import Http404
-
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.views.generic.edit import DeleteView
 
 from notes.forms import NotesForm #from .forms import NotesForm # both are same
 
@@ -28,3 +27,8 @@ class NotesUpdateView(UpdateView):
     model= Notes
     success_url = '/smart/notes'
     form_class = NotesForm
+
+class NotesDeleteView(DeleteView):
+    model = Notes
+    success_url = '/smart/notes'
+    template_name = 'notes/notes_delete.html' # it can be avoided if the template name changed from 'notes_delete.html' to 'notes_confirm_delete.html'
